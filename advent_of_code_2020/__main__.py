@@ -1,7 +1,4 @@
-import sys
-
-from advent_of_code_2020.advent_of_code_2020 import fib
+from advent_of_code_2020.advent_of_code_2020 import day1
 
 if __name__ == "__main__":
-    n = int(sys.argv[1])
-    print(fib(n))
+    print(day1())
