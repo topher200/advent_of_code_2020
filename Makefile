@@ -7,7 +7,11 @@ install:
 
 .PHONY: lint
 lint:
-	ls
+	pipenv pre-commit
+
+.PHONY: test
+test:
+	pipenv run pytest
 
 .PHONY: shell
 shell:
