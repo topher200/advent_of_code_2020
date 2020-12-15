@@ -3,7 +3,8 @@ default: install
 
 .PHONY: install
 install:
-	pipenv install --dev
+	pip install pipenv
+	pipenv install --deploy --dev
 
 .PHONY: lint
 lint:

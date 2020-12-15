@@ -18,9 +18,7 @@ jobs:
           python-version: 3.9
 
       - name: Install dependencies with pipenv
-        run: |
-          pip install pipenv
-          pipenv install --deploy --dev
+        run: make install
 
       - run: pipenv run isort --recursive --diff .
       - run: pipenv run black --check .
