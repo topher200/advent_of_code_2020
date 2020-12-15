@@ -7,7 +7,7 @@ install:
 
 .PHONY: lint
 lint:
-	pipenv pre-commit
+	pipenv run pre-commit run
 
 .PHONY: test
 test:
