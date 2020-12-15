@@ -9,6 +9,10 @@ install:
 lint:
 	pipenv run pre-commit run
 
+.PHONY: lint-all
+lint-all:
+	pipenv run pre-commit run --all-files
+
 .PHONY: test
 test:
 	pipenv run pytest
