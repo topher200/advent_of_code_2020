@@ -6,6 +6,9 @@ ENV LC_ALL C.UTF-8
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONFAULTHANDLER 1
 
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    make
+
 
 FROM base AS python-deps
 
@@ -35,4 +38,3 @@ COPY . .
 
 # Run the executable
 ENTRYPOINT ["python", "-m", "advent_of_code_2020"]
-CMD ["10"]

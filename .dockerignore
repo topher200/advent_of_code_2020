@@ -2,6 +2,7 @@
 **
 
 # ... except for dependencies and source
+!Makefile
 !Pipfile
 !Pipfile.lock
 !advent_of_code_2020
