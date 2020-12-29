@@ -1,4 +1,4 @@
-from advent_of_code_2020.advent_of_code_2020 import day1
+from advent_of_code_2020 import run
 
 if __name__ == "__main__":
     print(day1())

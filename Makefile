@@ -16,7 +16,7 @@ lint-all:
 
 .PHONY: test
 test:
-	pipenv run pytest
+	pipenv run python -m pytest
 
 .PHONY: shell
 shell:
@@ -24,4 +24,4 @@ shell:
 
 .PHONY: run
 run:
-	pipenv run python advent_of_code_2020/__main__.py
+	pipenv run python -m advent_of_code_2020
