@@ -36,4 +36,5 @@ USER appuser
 COPY . .
 
 # Run the executable
-ENTRYPOINT ["make", "run"]
+ENTRYPOINT ["python", "-m", "advent_of_code_2020"]
+CMD ["10"]
