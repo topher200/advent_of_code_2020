@@ -1,5 +1,6 @@
 # advent-of-code-2020
 
+[![CI Tests](https://github.com/topher200/advent_of_code_2020/workflows/Test/badge.svg)](https://github.com/topher200/advent_of_code_2020/actions?query=branch%3Amain)
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
 
 My attempt at a few Advent of Code 2020 problems. This repo is overengineered on purpose; the primary goal is to learn the current best-practices for Python project CI... not necessarily solve the AoC problems.
