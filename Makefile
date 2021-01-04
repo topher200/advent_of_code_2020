@@ -9,7 +9,7 @@ test:
 
 .PHONY: test-full
 test-full:
-	pipenv run pre-commit run --hook post-commit
+	pipenv run pre-commit run --hook post-commit --all-files
 
 .PHONY: shell
 shell:
