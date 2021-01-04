@@ -3,17 +3,13 @@ install:
 	pip install pipenv
 	pipenv install --deploy --dev
 
-.PHONY: lint
-lint:
-	pipenv run pre-commit run
-
-.PHONY: lint-all
-lint-all:
-	pipenv run pre-commit run --all-files
-
 .PHONY: test
 test:
-	pipenv run python -m pytest
+	pipenv run pre-commit run
+
+.PHONY: test-full
+test-full:
+	pipenv run pre-commit run --hook post-commit
 
 .PHONY: shell
 shell:

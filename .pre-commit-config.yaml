@@ -9,7 +9,15 @@ repos:
     name: isort
     stages: [commit]
     language: system
-    entry: pipenv run isort
+    entry: pipenv run isort --profile black
+    types: [python]
+
+  - id: isort-full
+    name: isort
+    stages: [post-commit]
+    always_run: true
+    language: system
+    entry: pipenv run isort --profile black --diff .
     types: [python]
 
   - id: black
@@ -17,6 +25,14 @@ repos:
     stages: [commit]
     language: system
     entry: pipenv run black
+    types: [python]
+
+  - id: black-full
+    name: black
+    stages: [post-commit]
+    always_run: true
+    language: system
+    entry: pipenv run black --check .
     types: [python]
 
   - id: flake8
@@ -27,9 +43,27 @@ repos:
     types: [python]
     exclude: setup.py
 
-  - id: mypy
+  - id: flake8-full
+    name: flake8
+    stages: [post-commit]
+    always_run: true
+    language: system
+    entry: pipenv run flake8
+    types: [python]
+    exclude: setup.py
+
+  - id: mypy-full
     name: mypy
     stages: [commit]
+    language: system
+    entry: pipenv run mypy
+    types: [python]
+    require_serial: true
+
+  - id: mypy-full
+    name: mypy
+    stages: [post-commit]
+    always_run: true
     language: system
     entry: pipenv run mypy
     types: [python]
@@ -43,9 +77,10 @@ repos:
     types: [python]
     pass_filenames: false
 
-  - id: pytest-cov
-    name: pytest
-    stages: [push]
+  - id: pytest-full
+    name: pytest with 100% coverage
+    stages: [post-commit]
+    always_run: true
     language: system
     entry: pipenv run pytest --cov --cov-fail-under=100
     types: [python]
