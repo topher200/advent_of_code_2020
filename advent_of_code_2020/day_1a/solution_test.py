@@ -4,10 +4,8 @@ from advent_of_code_2020.day_1a import solution
 
 
 def test_undefined_input() -> None:
-    empty_list: List[int] = []
     with pytest.raises(solution.MatchNotFound):
-        solution.solve(empty_list)
-
+        solution.solve([])
     with pytest.raises(solution.MatchNotFound):
         solution.solve([1])
     with pytest.raises(solution.MatchNotFound):
