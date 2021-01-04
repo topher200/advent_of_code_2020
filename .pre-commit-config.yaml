@@ -78,7 +78,7 @@ repos:
     types: [python]
     exclude: setup.py
 
-  - id: mypy-full
+  - id: mypy
     name: mypy
     stages: [commit]
     language: system
