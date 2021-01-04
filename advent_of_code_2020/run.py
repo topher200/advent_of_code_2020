@@ -2,13 +2,13 @@ import os
 
 import click
 
-from advent_of_code_2020.day_1 import solution
+from advent_of_code_2020.day_1a import solution
 
 
 @click.command()
 @click.option(
     "--input-file",
-    default="advent_of_code_2020/day_1/input.txt",
+    default="advent_of_code_2020/day_1a/input.txt",
     help="Filename to read in for puzzle input",
 )
 def day1(input_file: str):
