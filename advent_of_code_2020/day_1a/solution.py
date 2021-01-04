@@ -1,4 +1,4 @@
-from typing import Iterator
+from typing import Iterable
 
 
 class Error(Exception):
@@ -9,7 +9,7 @@ class MatchNotFound(Error):
     pass
 
 
-def solve(input: Iterator[int]) -> int:
+def solve(input: Iterable[int]) -> int:
     """Given a list of input numbers, find the solution to the problem.
 
     We do this by iterating through the input. For each int, we check to see if we've seen its "partner" before. (it's "partner" is defined as that <2020 - input_int>). If the input int has a match we perform the multiplcation. Otherwise, we add it to the set of "seen values" and continue to the next."""
