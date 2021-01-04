@@ -24,6 +24,11 @@ repos:
   - id: requirements-txt-fixer
   - id: trailing-whitespace
 
+- repo: meta
+  hooks:
+  - id: check-hooks-apply
+  - id: check-useless-excludes
+
 - repo: local
   hooks:
   - id: isort
