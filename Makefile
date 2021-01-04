@@ -1,6 +1,3 @@
-.PHONY: default
-default: install
-
 .PHONY: install
 install:
 	pip install pipenv
