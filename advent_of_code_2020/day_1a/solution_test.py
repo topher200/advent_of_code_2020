@@ -1,6 +1,6 @@
 import pytest
 
-import solution
+from advent_of_code_2020.day_1a import solution
 
 
 def test_undefined_input() -> None:
