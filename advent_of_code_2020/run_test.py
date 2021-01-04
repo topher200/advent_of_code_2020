@@ -1,4 +1,5 @@
 import os
+
 from click.testing import CliRunner
 
 from advent_of_code_2020 import run
